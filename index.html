@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Manuel | Advogados</title><!-- ALTERA AQUI 1 -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Inter:wght@400;600&display=swap');
+/* ALTERA AQUI 2: CORES - AZUL + DOURADO JURIDICO */
+:root{ --navy:#0B1D33; --gold:#C5A86A; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}body{background:#F8F7F4}
+header{padding:20px 8%;background:var(--navy);color:#fff;display:flex;justify-content:space-between}
+.hero{display:flex;flex-wrap:wrap;padding:60px 8%;gap:40px;background:var(--navy);color:#fff}
+.form{background:#fff;color:#111;padding:30px;flex:1;min-width:300px;border-radius:4px} .form input,.form select{width:100%;padding:12px;margin:8px 0;border:1px solid #ccc}
+.error{color:red;font-size:12px;display:none}
+@media(max-width:768px){.hero{flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+<div style="font-family:'Merriweather'">MANUEL & ASSOCIADOS <span style="display:block;font-size:10px;letter-spacing:3px;color:var(--gold)">ADVOCACIA</span></div><!-- ALTERA AQUI 3 -->
+<a href="https://wa.me/244900000000" style="background:var(--gold);color:var(--navy);padding:10px 20px;text-decoration:none;font-weight:700">WHATSAPP</a><!-- ALTERA AQUI 4 -->
+</header>
+<section class="hero">
+<div style="flex:1;min-width:300px">
+<h1 style="font-family:'Merriweather';font-size:48px">Defendemos seu <span style="color:var(--gold)">patrimônio</span></h1><!-- ALTERA AQUI 5 -->
+<p style="color:#A0AEC0;margin:20px 0">12 anos em casos trabalhistas e empresarial em Luanda. Resposta em 2h.</p><!-- ALTERA AQUI 6 -->
+</div>
+<div class="form">
+<h3>Consulta Grátis 15min</h3>
+<!-- ALTERA AQUI 8 E 9: FORMULÁRIO REATIVO -->
+<input id="nome" placeholder="Seu nome"><!-- ALTERA AQUI 9: CAMPO -->
+<span id="err-nome" class="error">Coloque seu nome</span>
+<input id="zap" placeholder="WhatsApp 923...">
+<select><option>Trabalhista</option><option>Empresarial</option><option>Família</option></select>
+<button onclick="validar()" style="width:100%;padding:14px;background:var(--navy);color:var(--gold);border:none;font-weight:700;cursor:pointer;margin-top:10px">QUERO CONSULTA</button>
+<p style="font-size:10px;color:#888;margin-top:8px">🔒 Sigilo total</p>
+</div>
+</section>
+<script>
+// REATIVIDADE: VALIDAÇÃO QUE IMPEDE ENVIO VAZIO
+function validar(){
+  let ok=true;
+  if(document.getElementById('nome').value.length<3){document.getElementById('err-nome').style.display='block';ok=false}else{document.getElementById('err-nome').style.display='none'}
+  if(ok){window.location.href='https://wa.me/244900000000'} // ALTERA AQUI 7: WHATSAPP FINAL - MESMO DO 4
+}
+</script>
+<footer style="padding:20px 8%;background:#06101F;color:#5A6C82">© Dr. Manuel - Talatona</footer><!-- ALTERA AQUI 10 -->
+</body>
+</html>
